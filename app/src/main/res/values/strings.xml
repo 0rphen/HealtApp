@@ -106,4 +106,9 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="telephone">Teléfono</string>
+    <string name="clinic_history">Historia Clínica</string>
+    <string name="family_background">Antecedentes Familiares</string>
 </resources>
