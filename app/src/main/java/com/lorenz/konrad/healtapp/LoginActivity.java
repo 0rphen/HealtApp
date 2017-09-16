@@ -90,7 +90,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                Intent intent = new Intent(LoginActivity.this, PerfilActivity.class);
+                startActivity(intent);
             }
         });
 
