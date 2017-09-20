@@ -1,94 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <!-- First Layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:orientation="horizontal">
 
+        <!-- Profile Picture-->
         <ImageView
             android:id="@+id/sign_up_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            android:layout_weight="3"/>
+            android:layout_weight="3"
+            android:src="@mipmap/ic_launcher" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/sign_up_name"
+            <!-- Input Name-->
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="@dimen/activity_horizontal_margin"
-                android:text="Nombre"/>
+                android:layout_height="wrap_content">
 
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lines="1"/>
-            <TextView
-                android:id="@+id/sign_up_lastname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:text="Apellido"/>
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold" />
 
-            <android.support.design.widget.TextInputEditText
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Input LastName-->
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sign_up_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:textStyle="bold" />
+
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
     </LinearLayout>
-
+    <!-- Secund Layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:orientation="vertical">
-
-        <TextView
+        <!--Input Telephone -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Teléfono"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:layout_margin="2dp"/>
+            android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputEditText
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/telephone"
+                android:inputType="phone"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+        <!-- Input Clinic History-->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numeric="integer"
-            android:layout_margin="2dp"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Historia Clinica"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:layout_margin="2dp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/clinic_history"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputEditText
+        <!-- Input Family Background-->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
 
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Antecedentes Familiares"
-              android:textSize="16dp"
-              android:textStyle="bold"
-              android:layout_margin="2dp"/>
-        <android.support.design.widget.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/family_background"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
