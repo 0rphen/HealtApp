@@ -111,4 +111,5 @@
     <string name="telephone">Teléfono</string>
     <string name="clinic_history">Historia Clínica</string>
     <string name="family_background">Antecedentes Familiares</string>
+    <string name="diagnostic">Diagnostico :</string>
 </resources>

@@ -101,6 +101,12 @@
                 android:textStyle="bold" />
         </android.support.design.widget.TextInputLayout>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_sign_up"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"/>
+
     </LinearLayout>
 
 </LinearLayout>
