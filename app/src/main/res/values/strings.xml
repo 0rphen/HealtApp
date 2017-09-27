@@ -4,7 +4,7 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
-    <string name="identity_card">Identity Card</string>
+    <string name="identity_card">Cédula</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_up">Register</string>

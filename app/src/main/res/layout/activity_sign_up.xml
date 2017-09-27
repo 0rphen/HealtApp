@@ -64,6 +64,20 @@
         android:layout_marginLeft="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
         android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/identity_card"
+                android:inputType="phone"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+
         <!--Input Telephone -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
