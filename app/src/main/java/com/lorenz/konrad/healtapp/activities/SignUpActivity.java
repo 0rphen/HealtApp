@@ -1,4 +1,4 @@
-package com.lorenz.konrad.healtapp;
+package com.lorenz.konrad.healtapp.activities;
 
 import android.content.Intent;
 import android.provider.MediaStore;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.lorenz.konrad.healtapp.R;
 
 public class SignUpActivity extends AppCompatActivity {
 
