@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "422193093986",
+    "firebase_url": "https://healtapp-11e65.firebaseio.com",
+    "project_id": "healtapp-11e65",
+    "storage_bucket": "healtapp-11e65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422193093986:android:d83391449ebabbae",
+        "android_client_info": {
+          "package_name": "com.lorenz.konrad.healtapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422193093986-t57ki4fdo9v218fj8q3d1resih1k5mhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuhxZjLEqWHM9Ruq8nruVkTjg7qhDbB_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

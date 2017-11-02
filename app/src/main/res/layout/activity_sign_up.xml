@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
+                    android:id="@+id/sign_up_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
@@ -70,6 +71,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView
+                android:id="@+id/sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/identity_card"
@@ -84,6 +86,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView
+                android:id="@+id/sing_up_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/telephone"
@@ -97,6 +100,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView
+                android:id="@+id/sing_up_clinic_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/clinic_history"
@@ -110,6 +114,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView
+                android:id="@+id/sing_up_family_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/family_background"
