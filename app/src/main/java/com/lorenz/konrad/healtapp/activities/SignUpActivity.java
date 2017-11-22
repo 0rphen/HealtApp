@@ -65,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity {
                 AutoCompleteTextView phone = (AutoCompleteTextView) findViewById(R.id.sing_up_phone);
                 AutoCompleteTextView clinicHist = (AutoCompleteTextView) findViewById(R.id.sing_up_clinic_history);
                 AutoCompleteTextView familiarBack = (AutoCompleteTextView) findViewById(R.id.sing_up_family_background);
-                AutoCompleteTextView email = (AutoCompleteTextView) findViewById(R.id.email);
+                AutoCompleteTextView emai = (AutoCompleteTextView) findViewById(R.id.sign_up_email);
                 RadioGroup rg = (RadioGroup) findViewById(R.id.opciones_usuario);
 
                 //which parameter need to put onRadioButtonClicked()?
@@ -73,7 +73,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 User user = new User(name.getText().toString(), lastName.getText().toString(),
                         Integer.parseInt(id.getText().toString()),
-                        Integer.parseInt(phone.getText().toString()), email.getText().toString(), clinicHist.getText().toString(),
+                        Integer.parseInt(phone.getText().toString()), emai.getText().toString(), clinicHist.getText().toString(),
                         familiarBack.getText().toString(), onRadioButtonClicked(rg));
 
 
