@@ -14,7 +14,8 @@ public class User {
     String familyBackground;
     char userType;//P Patient, D Doctor
 
-    public User(String name, String lastName, int identityCard, int phone, String email, String clinicHistory, String familyBackground, char userType) {
+    public User(String name, String lastName, int identityCard, int phone, String email,
+                String clinicHistory, String familyBackground, char userType) {
         this.name = name;
         this.lastName = lastName;
         this.identityCard = identityCard;
