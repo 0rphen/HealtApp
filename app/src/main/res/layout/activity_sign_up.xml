@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
     <!-- First Layout-->
     <LinearLayout
@@ -58,13 +61,16 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
     </LinearLayout>
-    <!-- Secund Layout-->
+
+
+    <!-- Second Layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:scrollbars="vertical">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -94,6 +100,24 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </android.support.design.widget.TextInputLayout>
+
+        <!-- Input Email-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/sign_up_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/activity_horizontal_margin"
+                android:textStyle="bold" />
+
+        </android.support.design.widget.TextInputLayout>
+
         <!-- Input Clinic History-->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -127,7 +151,7 @@
 
                 android:text="Tipo de Usuario"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/opciones_usuario"
@@ -141,14 +165,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Paciente"/>
+                    android:text="Paciente" />
 
                 <RadioButton
                     android:id="@+id/doctor"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Doctor"/>
+                    android:text="Doctor" />
 
             </RadioGroup>
         </android.support.design.widget.TextInputLayout>
@@ -156,9 +180,10 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/action_sign_up"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"/>
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:text="@string/action_sign_up" />
 
     </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
