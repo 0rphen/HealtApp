@@ -10,6 +10,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,10 +28,13 @@ import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
 
+    /*private RadioButton rp = (RadioButton) findViewById(R.id.patient);
+    private RadioButton rd = (RadioButton) findViewById(R.id.doctor); */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
 
 
         ImageView image = (ImageView) findViewById(R.id.sign_up_image);
@@ -52,24 +56,24 @@ public class SignUpActivity extends AppCompatActivity {
         final DatabaseReference myRef = db.getReference("User");
 
 
-
-
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 AutoCompleteTextView name = (AutoCompleteTextView) findViewById(R.id.sign_up_name);
                 AutoCompleteTextView lastName = (AutoCompleteTextView) findViewById(R.id.sign_up_lastname);
-                AutoCompleteTextView  id = (AutoCompleteTextView) findViewById(R.id.sign_up_id);
+                AutoCompleteTextView id = (AutoCompleteTextView) findViewById(R.id.sign_up_id);
                 AutoCompleteTextView phone = (AutoCompleteTextView) findViewById(R.id.sing_up_phone);
-                AutoCompleteTextView clinicHist = (AutoCompleteTextView)findViewById(R.id.sing_up_clinic_history);
-                AutoCompleteTextView familiarBack = (AutoCompleteTextView) findViewById(R.id.sign_up_family_background);
+                AutoCompleteTextView clinicHist = (AutoCompleteTextView) findViewById(R.id.sing_up_clinic_history);
+                AutoCompleteTextView familiarBack = (AutoCompleteTextView) findViewById(R.id.sing_up_family_background);
+                RadioGroup rg = (RadioGroup) findViewById(R.id.opciones_usuario);
 
                 //which parameter need to put onRadioButtonClicked()?
+               // char typeUser = onRadioButtonClicked();
 
-                User user = new User(name.getText().toString(),lastName.getText().toString(),Integer.parseInt(id.getText().toString()),
-                        Integer.parseInt(phone.getText().toString()),clinicHist.getText().toString(),familiarBack.getText().toString(),
-                        onRadioButtonClicked());
-
+                User user = new User(name.getText().toString(), lastName.getText().toString(),
+                        Integer.parseInt(id.getText().toString()),
+                        Integer.parseInt(phone.getText().toString()), email, clinicHist.getText().toString(),
+                        familiarBack.getText().toString(), onRadioButtonClicked(rg));
 
 
             }
@@ -97,22 +101,30 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public char onRadioButtonClicked(View view) {
-        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
-        char selected=' ';
-
         switch (view.getId()) {
-            case R.id.Patient:
-                if (checked)
-                    selected = 'P';
+            case R.id.patient:
+                if (checked) {
+                    return 'P';
+                }
                 break;
-            case R.id.Doctor:
-                if (checked)
-                    selected = 'D';
+
+            case R.id.doctor:
+                if (checked) {
+                    return 'D';
+                }
                 break;
         }
+    /*public char onRadioButtonClicked() {
+
+        char selected = ' ';
+
+        if (rp.isChecked() == true)
+            selected = 'P';
+        else if (rd.isChecked() == true)
+            selected = 'D';
         return selected;
-    }
+    }*/
 }
 
