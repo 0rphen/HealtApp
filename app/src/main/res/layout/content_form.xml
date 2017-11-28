@@ -21,10 +21,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Pregunta 1" />
 
             <EditText
+                android:id="@+id/pregunta1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="pregunta 2"/>
             <EditText
+                android:id="@+id/pregunta2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -52,8 +53,13 @@
                 android:layout_height="wrap_content"
                 android:text="Pregunta 3"/>
             <EditText
+                android:id="@+id/pregunta3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout>
+            <Button
+                android:id="@+id/register"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

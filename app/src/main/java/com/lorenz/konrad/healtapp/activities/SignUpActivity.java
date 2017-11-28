@@ -75,8 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
                         Integer.parseInt(id.getText().toString()),
                         Integer.parseInt(phone.getText().toString()), emai.getText().toString(), clinicHist.getText().toString(),
                         familiarBack.getText().toString(), onRadioButtonClicked(rg));
-
-
+                myRef.child("user").setValue(user);
             }
 
             @Override

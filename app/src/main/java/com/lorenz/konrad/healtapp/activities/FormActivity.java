@@ -7,10 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.lorenz.konrad.healtapp.R;
+import com.lorenz.konrad.healtapp.entities.Forms;
 
 public class FormActivity extends AppCompatActivity {
 
+    private DatabaseReference dbRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +35,15 @@ public class FormActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        String question1 = findViewById(R.id.pregunta1).toString();
+        String question2 = findViewById(R.id.pregunta2).toString();
+        String question3 = findViewById(R.id.pregunta3).toString();
+        newFormRegister(question1, question2, question3);
+    }
+
+    public void newFormRegister(String question1, String question2, String question3) {
+        dbRef = FirebaseDatabase.getInstance().getReference();
+        Forms form = new Forms(question1, question2, question3);
+        dbRef.child("form").setValue(form);
     }
 }
